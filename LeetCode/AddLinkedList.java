@@ -18,7 +18,6 @@ class Solution {
             if(carry > 0)
                 current.next = new ListNode(carry);
         }
-        System.out.print("test");
         return dummyHead.next;
     }
 }
