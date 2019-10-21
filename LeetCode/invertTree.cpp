@@ -8,7 +8,7 @@ struct TreeNode {
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
-        if(root == NULL) return NULL;
+        if(root == nullptr) return nullptr;
         TreeNode* right = invertTree(root -> right);
         TreeNode* left = invertTree(root -> left);
         root -> right = left;
