@@ -1,3 +1,6 @@
+import "sort"
+
+// Using a map
 func majorityElement(nums []int) int {
 	m := make(map[int]int)
 
@@ -15,4 +18,10 @@ func majorityElement(nums []int) int {
 		}
 	}
 	return -1
+}
+
+// Using a sort
+func majorityElement(nums []int) int {
+	sort.Ints(nums)
+	return nums[len(nums)/2]
 }
