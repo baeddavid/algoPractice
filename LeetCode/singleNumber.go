@@ -2,17 +2,17 @@
 func singleNumber(nums []int) int {
 	m := make(map[int]int)
 
-	for i := 0; i < len(nums); i++ {
-		if _, exists := m[nums[i]]; exists {
-			m[nums[i]]++
+	for _, val := range nums {
+		if _, exists := m[val]; exists {
+			m[val]++
 		} else {
-			m[nums[i]] = 1
+			m[val] = 1
 		}
 	}
 
-	for i := 0; i < len(nums); i++ {
-		if m[nums[i]] == 1 {
-			return nums[i]
+	for _, val := range nums {
+		if m[val] == 1 {
+			return val
 		}
 	}
 	return -1
