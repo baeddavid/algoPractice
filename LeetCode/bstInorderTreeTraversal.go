@@ -42,3 +42,26 @@ func inorderTraversal(root *TreeNode) []int {
 	}
 	return answer
 }
+
+//Recursive
+func inorderTraversal(root *TreeNode) []int {
+	return helper(root, []int{})
+}
+
+func helper(node *TreeNode, result []int) []int {
+	if node == nil {
+		return result
+	}
+
+	var left, right []int
+	if node.Left != nil {
+		left = helper(node.Left, result)
+	}
+	if node.Right != nil {
+		right = helper(node.Right, result)
+	}
+	result = append(result, left...)
+	result = append(result, node.Val)
+	result = append(result, right...)
+	return result
+}
