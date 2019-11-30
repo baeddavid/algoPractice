@@ -19,13 +19,6 @@ public class Heap {
         }
     }
 
-    public int extractMax() {
-        int popped = Heap[1];
-        Heap[1] = Heap[size--];
-        maxHeapify(1);
-        return popped;
-    }
-
     public void insert(int integer) {
         Heap[++size] = integer;
         int current = size;
@@ -34,6 +27,17 @@ public class Heap {
             swap(current, getParentOfNode(current));
             current = getParentOfNode(current);
         }
+    }
+
+    public int extractMax() {
+        int popped = Heap[1];
+        Heap[1] = Heap[size--];
+        maxHeapify(1);
+        return popped;
+    }
+
+    public int getSize() {
+        return size;
     }
 
     private void maxHeapify(int index) {
