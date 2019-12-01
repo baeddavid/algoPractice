@@ -1,4 +1,4 @@
-public class HeapSort {
+public class HeapSort implements Sorts{
 
     public void sort(int[] array) {
         buildHeap(array);
