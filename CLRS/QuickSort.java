@@ -15,7 +15,7 @@ public class QuickSort implements Sorts{
         int pivot = Array[right];
         int pivotIndex = left - 1;
 
-        for(int j = left; j < right - 1; j++) {
+        for(int j = left; j < right; j++) {
             if(Array[j] <= pivot) {
                 pivotIndex++;
                 swap(Array, pivotIndex, j);
