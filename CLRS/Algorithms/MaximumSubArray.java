@@ -1,3 +1,5 @@
+package Algorithms;
+
 import static java.lang.Math.*;
 
 public class MaximumSubArray {

@@ -1,3 +1,5 @@
+package Algorithms;
+
 public class QuickSelect {
     public int kthSmallestElement(int[] Array, int left, int right, int k) {
         int partition = partitionArray(Array, left, right);

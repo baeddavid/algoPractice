@@ -1,4 +1,6 @@
-public class HeapSort implements Sorts{
+package Algorithms;
+
+public class HeapSort implements Sorts {
 
     public void sort(int[] array) {
         buildHeap(array);
