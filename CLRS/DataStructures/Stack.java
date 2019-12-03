@@ -1,9 +1,9 @@
 package DataStructures;
 
 public class Stack {
-    int top;
-    int size;
-    Object[] StackArray;
+    private int top;
+    private int size;
+    private Object[] StackArray;
 
     public Stack(int size) {
         top = -1;
