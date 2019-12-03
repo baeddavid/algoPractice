@@ -11,13 +11,23 @@ public class LinkedList {
         head = null;
     }
 
+    public Node search(int key) {
+        Node current = head;
+        while(current != null && current.getKey() != key) {
+            current.setNext(current.getNext());
+        }
+        return current;
+    }
+
     public void insertFront(Object o) {
         Node newNode = new Node(o);
-        if(head == null) {
-            head = newNode;
-        } else {
+        if (!isListEmpty()) {
             newNode.setNext(head);
-            head = newNode;
         }
+        head = newNode;
+    }
+
+    public boolean isListEmpty() {
+        return size == 0;
     }
 }
