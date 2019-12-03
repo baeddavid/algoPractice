@@ -21,7 +21,7 @@ public class Stack {
 
     public void push(Object o) {
         if(isOverFlow()) {
-            System.out.println("Stack Overflow");
+            throw new Error("Overflow");
         } else {
             StackArray[++top] = o;
             size++;
@@ -30,7 +30,7 @@ public class Stack {
 
     public Object pop() {
         if(isOverFlow()) {
-            return null;
+            throw new Error("Underflow");
         } else {
             top--;
             size--;
