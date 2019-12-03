@@ -1,3 +1,5 @@
+package DataStructures;
+
 public class Heap {
     private int[] Heap;
     private int size;
