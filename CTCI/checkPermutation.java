@@ -1,3 +1,5 @@
+package CTCI;
+
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -17,6 +19,7 @@ class Solution {
         t = String(T);
         // Return their equality 
         return S.equals(T);
+
     }
     
     // ASCII Solution

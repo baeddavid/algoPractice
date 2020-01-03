@@ -1,7 +1,9 @@
+package CTCI;
+
 import java.util.HashMap;
 import java.util.TreeSet;
 
-class  Solution {
+class Solution {
     // HashMap Solution
     // Time: O(n)
     // Space: O(n)
